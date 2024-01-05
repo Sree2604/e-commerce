@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -32,24 +33,25 @@ function Navbar() {
         </div>
         <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
           <div className="text-sm lg:flex-grow">
-            <a
-              href="/home"
-              className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+            <Link
+              to={"/home"}
+              className="block mt-4 cursor-pointer lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
             >
               Products
-            </a>
-            <a
-              href="/wishlist"
-              className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+            </Link>
+            {/* <a href="/home">Products</a> */}
+            <Link
+              to={"/wishlist"}
+              className="block mt-4 cursor-pointer lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
             >
               Wishlist
-            </a>
-            <a
-              href="/cart"
-              className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
+            </Link>
+            <Link
+              to={"/cart"}
+              className="block mt-4 cursor-pointer lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
             >
               Cart
-            </a>
+            </Link>
           </div>
           <div>
             <a
