@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
+  const navigate = useNavigate()
   return (
     <>
       <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
@@ -32,24 +34,24 @@ function Navbar() {
         </div>
         <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
           <div className="text-sm lg:flex-grow">
-            <a
-              href="/home"
-              className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+            <p
+              onClick={()=>navigate('/home')}
+              className="block mt-4 lg:inline-block cursor-pointer lg:mt-0 text-teal-200 hover:text-white mr-4"
             >
               Products
-            </a>
-            <a
-              href="/wishlist"
-              className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+            </p>
+            <p
+              onClick={()=>navigate('/wishlist')}
+              className="block mt-4 cursor-pointer lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
             >
               Wishlist
-            </a>
-            <a
-              href="/cart"
-              className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
+            </p>
+            <p
+              onClick={()=>navigate('cart')}
+              className="block mt-4 cursor-pointer lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
             >
               Cart
-            </a>
+            </p>
           </div>
           <div>
             <a
