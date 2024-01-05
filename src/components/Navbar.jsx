@@ -35,19 +35,19 @@ function Navbar() {
         <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
           <div className="text-sm lg:flex-grow">
             <p
-              onClick={()=>navigate('/home')}
+              onClick={()=>window.location.href='/home'}
               className="block mt-4 lg:inline-block cursor-pointer lg:mt-0 text-teal-200 hover:text-white mr-4"
             >
               Products
             </p>
             <p
-              onClick={()=>navigate('/wishlist')}
+              onClick={()=>window.location.href = '/wishlist'}
               className="block mt-4 cursor-pointer lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
             >
               Wishlist
             </p>
             <p
-              onClick={()=>navigate('cart')}
+              onClick={()=>window.location.href = '/cart'}
               className="block mt-4 cursor-pointer lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
             >
               Cart
